@@ -256,7 +256,9 @@ The project generates:
 
 # 👨‍💻 Authors
 **Chaitanya Kashyap** – B240006AI
+
 **Aditya** – B240030CS
+
 4th Semester Project of Data Warehouseing and Mining
 
 Department of Computer Science & Engineering
