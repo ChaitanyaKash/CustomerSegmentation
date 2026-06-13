@@ -167,29 +167,20 @@ The datasets include:
 Customer-Segmentation-Ecommerce-Mining/
 │
 ├── data/
-│   ├── Ecommerce.csv
-│   ├── Fashion_Dataset.csv
-│   └── processed/
+│   ├── raw/
+│   │   ├── Ecommerce.csv
+│   │   ├── Fashion Dataset v2.csv
+│   │   └── Online Shopping Behavior Dataset.csv
+│   │
+│   └── warehouse/
+│       └── indian_multimodal_warehouse.db
 │
-├── notebooks/
-│   ├── ETL.ipynb
-│   └── Analytics.ipynb
+├── outputs/
 │
-├── database/
-│   └── warehouse.db
-│
-├── figures/
-│   ├── clustering/
-│   ├── eda/
-│   ├── olap/
-│   └── timeseries/
-│
-├── report/
-│   └── Group_13_Report.pdf
-│
-├── requirements.txt
-│
-└── README.md
+├── 01_Data_Warehouse_ETL_update.ipynb
+├── 02_Multimodal_Data_Mining_update.ipynb
+├── Project_Report.pdf
+├── README.md
 ```
 
 ---
