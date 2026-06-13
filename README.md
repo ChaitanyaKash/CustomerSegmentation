@@ -13,9 +13,9 @@ The objective is to help e-commerce businesses understand customer behavior and 
 
 ---
 
-## 🚀 Features
+## Features
 
-### 📊 Data Warehousing & ETL
+### Data Warehousing & ETL
 
 * Extract and preprocess multiple datasets
 * Data cleaning and transformation
@@ -24,7 +24,7 @@ The objective is to help e-commerce businesses understand customer behavior and 
 * Festival-aware feature engineering
 * Data quality validation
 
-### 📈 Exploratory Data Analysis
+### Exploratory Data Analysis
 
 * Spending class distribution
 * Correlation heatmaps
@@ -34,7 +34,7 @@ The objective is to help e-commerce businesses understand customer behavior and 
 * Geographic spending analysis
 * Festival impact visualization
 
-### 👥 Customer Segmentation
+### Customer Segmentation
 
 * K-Means Clustering
 * Hierarchical Clustering
@@ -44,13 +44,13 @@ The objective is to help e-commerce businesses understand customer behavior and 
 * t-SNE visualization
 * Segment profiling
 
-### 🔍 Advanced Data Mining
+### Advanced Data Mining
 
 * Isolation Forest anomaly detection
 * Customer churn prediction
 * Customer Lifetime Value (CLV) regression
 
-### 🤖 Predictive Modeling
+### Predictive Modeling
 
 * Spending class prediction
 * SMOTE for class balancing
@@ -79,7 +79,7 @@ The warehouse enables efficient OLAP-style analytics and business intelligence r
 
 ---
 
-# 📂 Datasets
+# Datasets
 
 | Dataset             | Size            | Purpose                                  |
 | ------------------- | --------------- | ---------------------------------------- |
@@ -99,7 +99,7 @@ The datasets include:
 
 ---
 
-# 🛠️ Tech Stack
+# Tech Stack
 
 * Python
 * Pandas
@@ -139,7 +139,7 @@ The datasets include:
 
 ---
 
-# 📊 Key Results
+# Key Results
 
 ✅ Built a complete ETL pipeline and star-schema warehouse
 
@@ -161,7 +161,7 @@ The datasets include:
 
 ---
 
-# 📁 Project Structure
+# Project Structure
 
 ```text
 Customer-Segmentation-Ecommerce-Mining/
@@ -186,7 +186,7 @@ Customer-Segmentation-Ecommerce-Mining/
 
 ---
 
-# 📈 Business Insights
+# Business Insights
 
 * High-frequency customers generate a disproportionate share of revenue.
 * Festival campaigns significantly increase customer spending.
@@ -197,7 +197,7 @@ Customer-Segmentation-Ecommerce-Mining/
 
 ---
 
-## ⚠️ Limitations
+## Limitations
 
 * The project is based on a dataset containing approximately **25,000 customer sessions**, which may not fully capture the diversity and scale of real-world e-commerce platforms handling millions of users.
 * Geographic analysis uses simulated state mappings due to the absence of actual customer location data.
