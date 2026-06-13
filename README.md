@@ -60,7 +60,7 @@ The objective is to help e-commerce businesses understand customer behavior and 
 
 ---
 
-# 🏗️ Data Warehouse Architecture
+# Data Warehouse Architecture
 
 The project follows a **Star Schema** consisting of:
 
@@ -115,7 +115,7 @@ The datasets include:
 
 ---
 
-# 🤖 Machine Learning Models
+# Machine Learning Models
 
 ## Clustering
 
@@ -145,9 +145,9 @@ The datasets include:
 
 ✅ Identified three meaningful customer segments:
 
-* ⭐ Stars (VIP Customers)
-* 👤 Regular Customers
-* 😴 Sleepers
+*  Stars (VIP Customers)
+*  Regular Customers
+*  Sleepers
 
 ✅ Festival periods showed significantly higher average spending
 
@@ -209,7 +209,7 @@ Customer-Segmentation-Ecommerce-Mining/
 * Customer churn is defined using a fixed 90-day inactivity threshold, which may not generalize across different businesses or industries.
 
 
-# 🔮 Future Scope
+# Future Scope
 
 * Recommendation System using Deep Learning
 * Real-time Streaming ETL Pipeline
@@ -220,7 +220,7 @@ Customer-Segmentation-Ecommerce-Mining/
 
 ---
 
-# ⚡ Installation
+# Installation
 
 ```bash
 git clone https://github.com/ChaitanyaKash/CustomerSegmentation.git
@@ -238,7 +238,7 @@ jupyter notebook
 
 ---
 
-# 📷 Outputs
+# Outputs
 
 The project generates:
 
@@ -255,7 +255,7 @@ The project generates:
 
 ---
 
-# 👨‍💻 Authors
+# Authors
 **Chaitanya Kashyap** – B240006AI
 
 **Aditya** – B240030CS
@@ -265,6 +265,6 @@ Department of Computer Science & Engineering
 
 ---
 
-# 📜 License
+# License
 
 This project is intended for **academic and educational purposes**. Feel free to fork and extend it with proper attribution.
