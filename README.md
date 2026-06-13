@@ -222,9 +222,9 @@ Customer-Segmentation-Ecommerce-Mining/
 # ⚡ Installation
 
 ```bash
-git clone https://github.com/yourusername/customer-segmentation-ecommerce-mining.git
+git clone https://github.com/ChaitanyaKash/CustomerSegmentation.git
 
-cd customer-segmentation-ecommerce-mining
+cd CustomerSegmentation
 
 pip install -r requirements.txt
 ```
