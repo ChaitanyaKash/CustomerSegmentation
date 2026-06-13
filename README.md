@@ -180,6 +180,7 @@ Customer-Segmentation-Ecommerce-Mining/
 ├── 01_Data_Warehouse_ETL_update.ipynb
 ├── 02_Multimodal_Data_Mining_update.ipynb
 ├── Project_Report.pdf
+├── requirements.txt
 ├── README.md
 ```
 
