@@ -111,7 +111,6 @@ The datasets include:
 * Seaborn
 * SHAP
 * PyTorch
-* ResNet-50
 * Jupyter Notebook
 
 ---
