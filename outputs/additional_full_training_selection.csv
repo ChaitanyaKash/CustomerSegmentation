@@ -1,0 +1,7 @@
+candidate,inner_macro_f1,weights
+Logistic regression,0.32830793076738707,"[1.0, 8.0, 4.0]"
+Extra Trees,0.3193584635903605,"[1.0, 8.0, 4.0]"
+Histogram boosting,0.3255707000708762,"[1.0, 8.0, 8.0]"
+CatBoost depth 4,0.33054703597927154,"[1.0, 0.5, 8.0]"
+CatBoost depth 6,0.3196951365164014,"[1.0, 0.5, 8.0]"
+Original XGBoost recipe,0.3239051304751464,"[1.0, 1.0, 1.0]"

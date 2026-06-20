@@ -1,0 +1,63 @@
+{
+  "source_commit": "5790627c84fd9543e5bf65b3168edb9729b476a3",
+  "source": "Saved outputs in original notebook; no retraining",
+  "spending": [
+    {
+      "model": "Logistic Regression",
+      "accuracy": 0.536508,
+      "macro_f1": 0.431128,
+      "macro_precision": 0.445495,
+      "balanced_accuracy": 0.451589
+    },
+    {
+      "model": "Random Forest",
+      "accuracy": 0.446984,
+      "macro_f1": 0.393659,
+      "macro_precision": 0.404127,
+      "balanced_accuracy": 0.391908
+    },
+    {
+      "model": "XGBoost",
+      "accuracy": 0.540317,
+      "macro_f1": 0.455329,
+      "macro_precision": 0.457049,
+      "balanced_accuracy": 0.454055
+    },
+    {
+      "model": "LightGBM",
+      "accuracy": 0.51873,
+      "macro_f1": 0.444281,
+      "macro_precision": 0.448481,
+      "balanced_accuracy": 0.442217
+    }
+  ],
+  "class_counts": {
+    "High": 1182,
+    "Low": 3937,
+    "Medium": 2756
+  },
+  "saved_train_counts": {
+    "High": 941,
+    "Low": 3154,
+    "Medium": 2205
+  },
+  "derived_test_counts": {
+    "High": 241,
+    "Low": 783,
+    "Medium": 551
+  },
+  "derived_majority_baseline": {
+    "accuracy": 0.49714285714285716,
+    "macro_f1": 0.22137404580152673,
+    "balanced_accuracy": 0.3333333333333333
+  },
+  "churn": {
+    "accuracy": 0.63,
+    "macro_f1": 0.6,
+    "precision_of_saved_values": "2 decimal places"
+  },
+  "clv": {
+    "r2": 0.0861
+  },
+  "warning": "Different labels, features and splits: these are historical context, not a controlled before/after experiment."
+}

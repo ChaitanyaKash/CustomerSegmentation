@@ -1,0 +1,21 @@
+{
+  "sessions": 25000,
+  "catalogue_rows": 14214,
+  "customers": 7875,
+  "cutoff": "2024-09-30",
+  "horizon_end": "2024-12-29",
+  "source_sha256": {
+    "Ecommerce.csv": "5cfee9033b4cc4144e2bf5df64e0916657f472326d00476dbfc2ee288062f86c",
+    "Fashion Dataset v2.csv": "90777eebae32a7883b998c8c81a0c3a547a7d5677139197d62046e8f1bf36e83",
+    "Online Shopping Behavior Dataset.xlsx": "62d1ad413575c0b73870b29e24b6824730803d573fc7e03619956e247ca4cc98"
+  },
+  "class_counts": {
+    "Low": 6778,
+    "High": 703,
+    "Medium": 394
+  },
+  "churn_counts": {
+    "1": 3959,
+    "0": 3916
+  }
+}

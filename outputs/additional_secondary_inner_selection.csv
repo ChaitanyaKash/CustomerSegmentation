@@ -1,0 +1,25 @@
+task,outer_fold,candidate,inner_ap,threshold,inner_mae
+churn,1,Logistic regression,0.5077300221363374,0.2,
+churn,1,Extra Trees,0.4897388828673953,0.30000000000000004,
+churn,1,CatBoost,0.4865463242643784,0.2,
+churn,2,Logistic regression,0.4942684993067457,0.2,
+churn,2,Extra Trees,0.5045095847556247,0.2,
+churn,2,CatBoost,0.5045569009428519,0.35000000000000003,
+churn,3,Logistic regression,0.5044796873688002,0.2,
+churn,3,Extra Trees,0.4874048198424098,0.2,
+churn,3,CatBoost,0.49242673645189494,0.2,
+revenue,1,Mean constant,,,460.62785444727893
+revenue,1,Median constant,,,266.44488333333334
+revenue,1,Histogram boosting raw,,,458.9856045842678
+revenue,1,Histogram boosting log1p,,,267.7248820933651
+revenue,1,CatBoost MAE,,,266.9709536673227
+revenue,2,Mean constant,,,472.73271778769833
+revenue,2,Median constant,,,274.75485238095234
+revenue,2,Histogram boosting raw,,,471.80186760762274
+revenue,2,Histogram boosting log1p,,,276.082366422646
+revenue,2,CatBoost MAE,,,275.15427785015237
+revenue,3,Mean constant,,,452.88979237103183
+revenue,3,Median constant,,,261.99771190476196
+revenue,3,Histogram boosting raw,,,452.58424558544067
+revenue,3,Histogram boosting log1p,,,263.26406180051623
+revenue,3,CatBoost MAE,,,262.37749876795357
