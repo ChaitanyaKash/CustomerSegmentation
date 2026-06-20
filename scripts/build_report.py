@@ -20,7 +20,7 @@ from reportlab.platypus import (SimpleDocTemplate, Paragraph, Spacer, Table,
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'outputs'
-REVISION = '27 October 2026'
+REVISION = '20 June 2026'
 ORIGINAL_REPORT_SHA256 = '54dd9600e564980df4d0e4eb46e2055bd47dae2dd819419912dd3270c4e363db'
 NAVY = colors.HexColor('#183349')
 TEAL = colors.HexColor('#087e8b')
@@ -187,8 +187,8 @@ def build():
     p('Future monetary, future session count, churn, class labels and customer IDs are excluded from predictors. Features use past visits only. A perturbation of future revenue, unit price and device data must leave every past feature unchanged. Source keys, nonnegative values, dimension coverage and SQLite integrity are checked.')
     p('Initial model selection uses five-fold training CV. Median imputation, scaling and optional SMOTE occur inside each fold. XGBoost sample weights are recomputed on the fold training labels; LightGBM class weights are fold-local. Randomised searches maximise macro-F1 for spending. No held-out threshold, feature or model selection occurs.')
     p('After all initial supervised selections are locked, each prespecified estimator is evaluated in one final test stage. Later figures and error inspection use cached predictions. Further development uses nested validation on original training customers only, with hashes proving that original test outputs remain unchanged.')
-    h('Selection budgets and compute', 2)
-    p('Each spending tree family/imbalance approach samples four configurations, and logistic regression samples three. Searches use one CV job and two native CPU threads. Temperature monitoring is external; pause at 75 degrees C and remain below 85 degrees C. No GPU training is used.')
+    h('Selection budgets', 2)
+    p('Each spending tree family/imbalance approach samples four configurations, and logistic regression samples three. Cross-validation runs sequentially.')
 
     page('3. Spending prediction and ablation')
     p('Training CV selected XGBoost with SMOTE and RFM + behavioural + catalogue-proxy features. Each ablation selects its own estimator using the same candidate families and search budget; the comparison therefore measures modelling recipes rather than a causal proxy effect.')
@@ -216,7 +216,7 @@ def build():
     p('Sources: outputs/churn_test_metrics.csv and outputs/clv_test_metrics.csv.', 'ReportCaption')
 
     page('5. Additional training-only validation')
-    p('After the original holdout was opened, a requested second round explored stronger models without reopening it. Three outer folds assess a procedure with five inner folds. All customers in this extension belong to the original training partition. Estimates remain exploratory because algorithm development has already used this population; a new future period is still required.')
+    p('After the original holdout was opened, a second round explored stronger models without reopening it. Three outer folds assess a procedure with five inner folds. All customers in this extension belong to the original training partition. Estimates remain exploratory because algorithm development has already used this population; a new future period is still required.')
     h('Spending: richer features and decision weighting', 2)
     p('Compare logistic regression, Extra Trees, histogram boosting, CatBoost at two depths, and the original fixed XGBoost recipe. Inner out-of-fold probabilities choose the candidate and class multipliers by macro-F1. Each locked choice is evaluated once on its outer fold. Multipliers are decision weights, not calibrated probabilities.')
     metric_table(extra['summary'], [('model', 'Procedure / reference'), ('macro_f1_mean', 'Mean macro-F1'),
@@ -295,7 +295,7 @@ def build():
                     'python scripts/verify_results.py', 'python -m pip install -r requirements-report.txt',
                     'python scripts/build_report.py', 'python scripts/verify_report.py']:
         p(command, 'ReportCode')
-    p('The runner uses the current Python executable, executes both notebooks sequentially and saves outputs. Monitor temperature externally; thermal.pause pauses between fits. Interrupt immediately if needed during a fit. Do not run concurrent training jobs.')
+    p('The runner uses the current Python executable, executes both notebooks sequentially and saves outputs.')
     h('Evidence index', 2)
     tab(['Artifact', 'Role'], [
         ['01_Data_Warehouse_ETL_updated.ipynb', 'Source validation, temporal mart, warehouse and leakage checks.'],

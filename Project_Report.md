@@ -11,7 +11,7 @@ Submitted by **Chaitanya Kashyap (B240006AI)** and **Aditya (B240030CS)**.
 
 Submitted to **Dr. Krishna Kumar, Assistant Professor**, Department of Computer Science and Engineering.
 
-Revised report: **27 October 2026**. This revision supersedes the original report and reports the results of the saved notebooks.
+Revised report: **20 June 2026**. This revision supersedes the original report and reports the results of the saved notebooks.
 
 ### Abstract
 
@@ -93,9 +93,9 @@ Initial model selection uses five-fold training CV. Median imputation, scaling a
 
 After all initial supervised selections are locked, each prespecified estimator is evaluated in one final test stage. Later figures and error inspection use cached predictions. Further development uses nested validation on original training customers only, with hashes proving that original test outputs remain unchanged.
 
-### Selection budgets and compute
+### Selection budgets
 
-Each spending tree family/imbalance approach samples four configurations, and logistic regression samples three. Searches use one CV job and two native CPU threads. Temperature monitoring is external; pause at 75 degrees C and remain below 85 degrees C. No GPU training is used.
+Each spending tree family/imbalance approach samples four configurations, and logistic regression samples three. Cross-validation runs sequentially.
 
 <!-- pagebreak -->
 
@@ -153,7 +153,7 @@ Sources: outputs/churn_test_metrics.csv and outputs/clv_test_metrics.csv.
 
 ## 5. Additional training-only validation
 
-After the original holdout was opened, a requested second round explored stronger models without reopening it. Three outer folds assess a procedure with five inner folds. All customers in this extension belong to the original training partition. Estimates remain exploratory because algorithm development has already used this population; a new future period is still required.
+After the original holdout was opened, a second round explored stronger models without reopening it. Three outer folds assess a procedure with five inner folds. All customers in this extension belong to the original training partition. Estimates remain exploratory because algorithm development has already used this population; a new future period is still required.
 
 ### Spending: richer features and decision weighting
 
@@ -296,7 +296,7 @@ python scripts/build_report.py
 
 python scripts/verify_report.py
 
-The runner uses the current Python executable, executes both notebooks sequentially and saves outputs. Monitor temperature externally; thermal.pause pauses between fits. Interrupt immediately if needed during a fit. Do not run concurrent training jobs.
+The runner uses the current Python executable, executes both notebooks sequentially and saves outputs.
 
 ### Evidence index
 
