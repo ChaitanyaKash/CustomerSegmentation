@@ -2,7 +2,6 @@
 import hashlib
 import json
 from pathlib import Path
-import re
 
 import nbformat
 import numpy as np
@@ -113,8 +112,13 @@ def verify():
         assert hashlib.sha256((ROOT / 'data/raw' / name).read_bytes()).hexdigest() == expected
     original = ROOT / 'local_notes/original_docs/Project_Report.pdf'
     if original.exists():
-        assert original.read_bytes() == (ROOT / 'Project_Report.pdf').read_bytes()
-    print('PASS: raw sources and preserved report unchanged')
+        assert hashlib.sha256(original.read_bytes()).hexdigest() == '54dd9600e564980df4d0e4eb46e2055bd47dae2dd819419912dd3270c4e363db'
+    report_manifest = OUT / 'report_manifest.json'
+    if report_manifest.exists():
+        report = json.loads(report_manifest.read_text(encoding='utf-8'))
+        assert hashlib.sha256((ROOT / 'Project_Report.pdf').read_bytes()).hexdigest() == report['report_sha256']
+        assert hashlib.sha256((ROOT / 'Project_Report.md').read_bytes()).hexdigest() == report['markdown_sha256']
+    print('PASS: raw sources and original-report backup unchanged; revised report matches manifest')
     assert not any(path.stat().st_size == 0 for path in OUT.iterdir() if path.is_file())
     print('All saved-result checks passed. No models were refitted.')
 

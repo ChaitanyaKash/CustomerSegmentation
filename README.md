@@ -145,7 +145,7 @@ The prior saved outputs are preserved in [`outputs/legacy_audit.json`](outputs/l
 - Replaced row-order splitting of identical zero-revenue outcomes with declared revenue bands.
 - Removed simulated-state spending conclusions and unverified fraud/bot claims.
 - Replaced the in-sample “aspirational customer” list with a clearly labelled held-out error cohort. Misclassification is not demonstrated marketing opportunity.
-- Kept the PDF unchanged as a historical document; its outdated claims are not current results.
+- Replaced the public PDF with a revised report based on saved results; the unchanged historical PDF remains backed up locally outside Git.
 
 ## Insights
 
@@ -161,7 +161,7 @@ This is one historical cutoff and one observation horizon. A new, untouched futu
 
 The catalogue is undated, has substantial missing ratings, and is connected through an assumed category mapping. Proxies are not genuine visual features or demonstrated purchase-level joins. Geography codes are undocumented. Festival windows are manually curated and their associations do not establish campaign effects. Session absence is not confirmed account churn, and next-period revenue is not lifetime value. No causal marketing lift, fraud accuracy or deployment readiness is established.
 
-[`Project_Report.pdf`](Project_Report.pdf) remains unchanged and contains historical claims superseded here. Its local backup is `local_notes/original_docs/Project_Report.pdf`, excluded from Git. Slides were not present in the repository and their location is still required.
+[`Project_Report.pdf`](Project_Report.pdf) is the revised 11-page report, with readable source in [`Project_Report.md`](Project_Report.md). It includes the actual held-out results, baselines, additional validation and corrected claims. The unchanged historical report remains at `local_notes/original_docs/Project_Report.pdf`, excluded from Git. Slides were not present in the repository and their location is still required.
 
 ## How to run
 
@@ -173,6 +173,9 @@ python -m venv .venv
 python -m pip install -r requirements-lock.txt
 python scripts/run_notebooks.py
 python scripts/verify_results.py
+python -m pip install -r requirements-report.txt
+python scripts/build_report.py
+python scripts/verify_report.py
 ```
 
 For interactive use, run `jupyter notebook` and execute notebook 01 followed by notebook 02 in this environment. The runner uses the current Python executable and saves outputs. The original modelling stage and the additional nested-validation stage can take several minutes.
@@ -180,3 +183,5 @@ For interactive use, run `jupyter notebook` and execute notebook 01 followed by 
 Use two CPU threads and one CV job at a time, with no concurrent training jobs. Monitor CPU/GPU temperatures externally; pause at **75 °C** and keep them below **85 °C**. The runner's cooperative pause file is `thermal.pause`: create it to pause between fits and delete it to resume after cooling. Interrupt the kernel/process for an immediate stop during a fit. Automatic temperature measurement is not implemented because Windows did not expose suitable sensors in this session.
 
 The verification script refits no models. It checks execution completeness, customer separation, cached metrics, source hashes, unchanged original evaluation files and the preserved report. Output files replace obsolete charts and stray files; original generated files are backed up locally outside Git.
+
+The report builder uses saved results only. Its manifest records the PDF, Markdown and source hashes; the report verifier checks all 74 unique tabulated numeric values. The final rendered PDF pages were visually reviewed. Rebuilding the report does not retrain models.
