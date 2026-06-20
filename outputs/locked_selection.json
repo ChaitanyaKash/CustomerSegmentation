@@ -1,0 +1,10 @@
+{
+  "spending_features": "RFM + behaviour + proxies",
+  "spending_model": "XGBoost / SMOTE",
+  "churn_model": "Logistic regression",
+  "clv_model": "Gradient boosting / log1p",
+  "seed": 42,
+  "test_fraction": 0.2,
+  "cv_folds": 5,
+  "churn_threshold": 0.5
+}

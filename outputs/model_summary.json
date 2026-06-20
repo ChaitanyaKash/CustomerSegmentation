@@ -1,0 +1,118 @@
+{
+  "selection": {
+    "spending_features": "RFM + behaviour + proxies",
+    "spending_model": "XGBoost / SMOTE",
+    "churn_model": "Logistic regression",
+    "clv_model": "Gradient boosting / log1p",
+    "seed": 42,
+    "test_fraction": 0.2,
+    "cv_folds": 5,
+    "churn_threshold": 0.5
+  },
+  "spending": [
+    {
+      "model": "Majority baseline",
+      "accuracy": 0.8603174603174604,
+      "balanced_accuracy": 0.3333333333333333,
+      "macro_f1": 0.3083048919226394,
+      "recall_Low": 1.0,
+      "recall_Medium": 0.0,
+      "recall_High": 0.0
+    },
+    {
+      "model": "Logistic regression baseline",
+      "accuracy": 0.8603174603174604,
+      "balanced_accuracy": 0.3333333333333333,
+      "macro_f1": 0.3083048919226394,
+      "recall_Low": 1.0,
+      "recall_Medium": 0.0,
+      "recall_High": 0.0
+    },
+    {
+      "model": "RFM",
+      "accuracy": 0.8603174603174604,
+      "balanced_accuracy": 0.3333333333333333,
+      "macro_f1": 0.3083048919226394,
+      "recall_Low": 1.0,
+      "recall_Medium": 0.0,
+      "recall_High": 0.0
+    },
+    {
+      "model": "RFM + behaviour",
+      "accuracy": 0.7193650793650793,
+      "balanced_accuracy": 0.31022902257032264,
+      "macro_f1": 0.3119157420912612,
+      "recall_Low": 0.825830258302583,
+      "recall_Medium": 0.012658227848101266,
+      "recall_High": 0.09219858156028368
+    },
+    {
+      "model": "RFM + behaviour + proxies",
+      "accuracy": 0.7073015873015873,
+      "balanced_accuracy": 0.31959326003171157,
+      "macro_f1": 0.3201096459212078,
+      "recall_Low": 0.8088560885608856,
+      "recall_Medium": 0.05063291139240506,
+      "recall_High": 0.09929078014184398
+    }
+  ],
+  "churn": [
+    {
+      "model": "Prior baseline",
+      "roc_auc": 0.5,
+      "pr_auc_ap": 0.5142857142857142,
+      "churn_f1": 0.0,
+      "accuracy": 0.4857142857142857,
+      "macro_f1": 0.3269230769230769
+    },
+    {
+      "model": "Logistic regression",
+      "roc_auc": 0.47118534656661015,
+      "pr_auc_ap": 0.4926197023135059,
+      "churn_f1": 0.5003111387678905,
+      "accuracy": 0.4901587301587302,
+      "macro_f1": 0.4899481811791494
+    }
+  ],
+  "clv": [
+    {
+      "model": "Mean baseline",
+      "r2": -7.65641309072862e-05,
+      "mae": 454.98726481834217
+    },
+    {
+      "model": "Linear regression",
+      "r2": -0.011267953757210902,
+      "mae": 457.16052947901164
+    },
+    {
+      "model": "Gradient boosting / raw target",
+      "r2": -0.009499344467448712,
+      "mae": 455.65310296305546
+    },
+    {
+      "model": "Gradient boosting / log1p",
+      "r2": -0.09565849906837065,
+      "mae": 261.6896563329339
+    }
+  ],
+  "selected_k": 6,
+  "session_anomalies": 250,
+  "heldout_medium_predicted_high": 14,
+  "versions": {
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "matplotlib": "3.11.2",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "imbalanced-learn": "0.14.2",
+    "xgboost": "3.4.1",
+    "lightgbm": "4.7.0",
+    "shap": "0.54.1",
+    "threadpoolctl": "3.7.0",
+    "nbformat": "5.11.1",
+    "nbclient": "0.11.0",
+    "ipykernel": "7.4.0",
+    "notebook": "7.6.3"
+  }
+}

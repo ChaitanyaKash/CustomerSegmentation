@@ -1,0 +1,4 @@
+model,cv_mae,params
+Linear regression,461.6405345879683,{}
+Gradient boosting / raw target,460.19543873586207,"{""model__min_samples_leaf"": 20, ""model__max_leaf_nodes"": 7, ""model__learning_rate"": 0.03, ""model__l2_regularization"": 1.0}"
+Gradient boosting / log1p,269.017642383652,"{""model__regressor__min_samples_leaf"": 20, ""model__regressor__max_leaf_nodes"": 7, ""model__regressor__learning_rate"": 0.03, ""model__regressor__l2_regularization"": 1.0}"

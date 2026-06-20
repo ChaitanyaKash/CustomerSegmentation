@@ -1,0 +1,8 @@
+local_notes/
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+*.db-journal
+*.db-wal
+*.db-shm
+thermal.pause

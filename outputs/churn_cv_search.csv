@@ -1,0 +1,3 @@
+model,cv_average_precision,params
+Logistic regression,0.5043001725266233,"{""model__class_weight"": null, ""model__C"": 0.1}"
+Random forest,0.5034525427547185,"{""model__n_estimators"": 100, ""model__min_samples_leaf"": 10, ""model__max_depth"": 4, ""model__class_weight"": null}"
