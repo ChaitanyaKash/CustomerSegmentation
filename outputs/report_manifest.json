@@ -1,7 +1,7 @@
 {
-  "revision": "27 October 2026",
-  "report_sha256": "100754ced02f210fee146924816211a684ba41d9a3e42e9cdc766de24cefe861",
-  "markdown_sha256": "2223fd93d655dad14fa5e093bd829c21ba242cfdef525dc9a4e69f05e323b7a1",
+  "revision": "20 June 2026",
+  "report_sha256": "8359819ef979a0a41fd6a1c1fe6b6bd1d35098e124bd20974fe3fe4855265cd8",
+  "markdown_sha256": "4eb8bcaf4032c80917e46852fc78bd1c7feb1a612a6b85ea5abc7a08aa6f3735",
   "original_report_sha256": "54dd9600e564980df4d0e4eb46e2055bd47dae2dd819419912dd3270c4e363db",
   "reportlab_version": "4.4.9",
   "source_sha256": {

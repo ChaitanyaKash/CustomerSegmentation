@@ -22,7 +22,8 @@ def verify():
     text = '\n'.join(page.extract_text() or '' for page in reader.pages)
     for number in manifest['reported_numeric_values']:
         assert number in text, f'Missing reported number: {number}'
-    assert '27 October 2026' in text
+    assert '20 June 2026' in text
+    assert '27 October 2026' not in text
     assert 'No ResNet-50 embeddings' in text
     assert manifest['models_refitted'] is False
     backup = ROOT / 'local_notes/original_docs/Project_Report.pdf'

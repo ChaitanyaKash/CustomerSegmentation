@@ -180,8 +180,6 @@ python scripts/verify_report.py
 
 For interactive use, run `jupyter notebook` and execute notebook 01 followed by notebook 02 in this environment. The runner uses the current Python executable and saves outputs. The original modelling stage and the additional nested-validation stage can take several minutes.
 
-Use two CPU threads and one CV job at a time, with no concurrent training jobs. Monitor CPU/GPU temperatures externally; pause at **75 °C** and keep them below **85 °C**. The runner's cooperative pause file is `thermal.pause`: create it to pause between fits and delete it to resume after cooling. Interrupt the kernel/process for an immediate stop during a fit. Automatic temperature measurement is not implemented because Windows did not expose suitable sensors in this session.
-
 The verification script refits no models. It checks execution completeness, customer separation, cached metrics, source hashes, unchanged original evaluation files and the preserved report. Output files replace obsolete charts and stray files; original generated files are backed up locally outside Git.
 
 The report builder uses saved results only. Its manifest records the PDF, Markdown and source hashes; the report verifier checks all 74 unique tabulated numeric values. The final rendered PDF pages were visually reviewed. Rebuilding the report does not retrain models.
