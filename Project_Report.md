@@ -11,8 +11,6 @@ Submitted by **Chaitanya Kashyap (B240006AI)** and **Aditya (B240030CS)**.
 
 Submitted to **Dr. Krishna Kumar, Assistant Professor**, Department of Computer Science and Engineering.
 
-Revised report: **20 June 2026**. This revision supersedes the original report and reports the results of the saved notebooks.
-
 ### Abstract
 
 This project builds a SQLite session warehouse and evaluates future spending class, future session inactivity and next-period revenue. A fixed customer holdout and training-only cross-validation separate model selection from final evaluation. Descriptive mining uses log-transformed RFM and multivariate session anomaly detection.
@@ -312,4 +310,4 @@ The runner uses the current Python executable, executes both notebooks sequentia
 | Project_Report.md / scripts/build_report.py | Readable report source and reproducible PDF builder. |
 | outputs/report_manifest.json | Source/output hashes, numerical reporting checks and report build versions. |
 
-Project repository: https://github.com/ChaitanyaKash/CustomerSegmentation. References in this report are repository artifacts, not claims about unverified external dataset provenance. Slides were absent from the repository; their location remains unresolved and no updated slide deck is claimed.
+Project repository: https://github.com/ChaitanyaKash/CustomerSegmentation. References in this report are repository artifacts, not claims about unverified external dataset provenance.
